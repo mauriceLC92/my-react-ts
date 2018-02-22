@@ -1,30 +1,37 @@
 import * as React from 'react';
 import './App.css';
 
+const Header = require('../Dashboard/Header');
+const EditableHorseList = require('../HorseCard/EditableHorseList');
+const LeaderBoard  = require('../Dashboard/LeaderBoard');
+const StartAndStopButtons = require('../Dashboard/StartAndStopButtons');
+const GenerateClearButtons  = require('../Dashboard/GenerateClearButtons');
+const EditableRaceTrack  = require('../RaceTrack/EditableRaceTrack');
+
+
 interface Props {
-	samplePropProp?: string;
+	onStart?: boolean;
+	onStop?: boolean;
+	onGen?: boolean;
+	onClear?: boolean;
+	horseListEmpty?: boolean;
+	run?: boolean;
+
 }
 
 interface State {
-	sampleStateProp?: string;
+	horseListEmpty?: boolean;
+	run?: boolean;
 }
 
 export class App extends React.Component<Props, State> {
-	constructor(props) {
+	constructor(props: Props) {
 		super(props);
-		this.state = {horseListEmpty: false, run: false, beginRace: false};
+		this.state = {horseListEmpty: false, run: false};
 	
-	  }
-	
-	  beginRace = () =>{
-		this.setState({beginRace: true})
-	  }
-	
-	  clearRace = () =>{
-		this.setState({beginRace: false})
 	  }
 	  
-	  renderHorseList = () => {
+	  renderHorseList(){
 		this.setState({horseListEmpty: true});
 	
 	  }
@@ -82,4 +89,3 @@ export class App extends React.Component<Props, State> {
 		);
 	  }
 	}
-	
