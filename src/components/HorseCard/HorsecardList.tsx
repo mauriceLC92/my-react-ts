@@ -1,16 +1,19 @@
 import * as React from 'react';
+import { horseInfo } from '../../../interface';
 const HorseCard  =require('./HorseCard');
 const team =require('../App/teamdata');
 
-interface Props {
+const horseInfo =require('../../../interface');
 
+interface Props {
+    
 }
 
 interface State {
 
 }
 
-const horseComponents = team.map((horse) => (
+const horseComponents = team.map((horse: horseInfo) => (
     <HorseCard
     id = {horse.id}
     horseAvatar={horse.avatar_url}
