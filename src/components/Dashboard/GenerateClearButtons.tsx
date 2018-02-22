@@ -6,8 +6,8 @@ interface State {
 }
 
 interface Props {
-    onGen: boolean
-    onClear: boolean
+    onGen: boolean;
+    onClear: boolean;
 }
 export class GenerateClearButtons extends React.Component <Props, State>{
 

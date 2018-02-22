@@ -6,8 +6,8 @@ interface State {
 }
 
 interface Props {
-    onStart: boolean
-    onStop: boolean
+    onStart: boolean;
+    onStop: boolean;
 }
 export class StartAndStopButtons extends React.Component <Props, State>{
     constructor(props: Props){
