@@ -6,7 +6,7 @@ export default interface horseInfo{
     html_url: string;
     transisitonTime: string;
     login: string;
-    horseListEmpty: boolean;
+    horseListEmpty: any;
 }
 
 export default interface nextPropState{
