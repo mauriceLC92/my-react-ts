@@ -7,8 +7,6 @@ const LeaderBoard  = require('../Dashboard/LeaderBoard');
 const StartAndStopButtons = require('../Dashboard/StartAndStopButtons');
 const GenerateClearButtons  = require('../Dashboard/GenerateClearButtons');
 const EditableRaceTrack  = require('../RaceTrack/EditableRaceTrack');
-
-
 interface Props {
 	onStart?: boolean;
 	onStop?: boolean;
@@ -29,63 +27,58 @@ export class App extends React.Component<React.Props<Props>, State> {
 		super(props);
 		this.state = {horseListEmpty: false, run: false};
 	
-	  }
-	  
-	  renderHorseList(){
+}
+		
+renderHorseList() {
 		this.setState({horseListEmpty: true});
 	
-	  }
+}
 	
-	  clearHorseList = () => {
+clearHorseList = () => {
 		this.setState({horseListEmpty: false});
-	  }
+}
 	
-	  startRace = () =>{
-		this.setState({run: true})
-	  }
+startRace = () => {
+		this.setState({run: true});
+}
 	
-	  resetRace = () =>{
-		this.setState({run: false})
+resetRace = () => {
+		this.setState({run: false});
 		
-	  }
+}
 	
-	  render() {
+render() {
 		return (
-		  <div className="App">
+<div className="App">
 			<Header />
-			<div className='ui four column grid'>
-			  <div className='row'>
-				<div className='column'>
-				  <GenerateClearButtons 
-				  onGen = {this.renderHorseList}
-				  onClear = {this.clearHorseList}/>
+			<div className="ui four column grid">
+<div className="row">
+				<div className="column">
+<GenerateClearButtons onGen={this.renderHorseList} onClear={this.clearHorseList} />
 				</div>
-				<div className='columnResult'>
-				  <LeaderBoard />
+				<div className="columnResult">
+<LeaderBoard />
 				</div>
-				<div className='column'>
-				  <h2 className='Heading'>Kurtosys Race Track</h2>
+				<div className="column">
+<h2 className="Heading">Kurtosys Race Track</h2>
 				</div>
-				<div className='column'>
-				  <StartAndStopButtons 
-				  onStart = {this.startRace}
-				  onStop = {this.resetRace}/>
+				<div className="column">
+<StartAndStopButtons onStart={this.startRace} onStop={this.resetRace}/>
 				</div>
-			  </div> 
-			  <div className='column'>
-				<EditableHorseList 
-				  horseListEmpty={this.state.horseListEmpty} />
-			  </div>
-			  <div className='column'>
-				<EditableRaceTrack run = {this.state.run}/>
-			  </div>
-			   {/* <div className='column'>...
+</div> 
+<div className="column">
+<EditableHorseList horseListEmpty={this.state.horseListEmpty} /> 
+</div>
+<div className="column">
+<EditableRaceTrack run={this.state.run}/>
+</div>
+{/* <div className='column'>...
 			  </div> */}
-			  {/* <div className='column'>
+{/* <div className='column'>
 				...
 			  </div>  */}
-			</div>
-		  </div>
+</div>
+</div>
 		);
-	  }
+}
 	}

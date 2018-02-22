@@ -2,17 +2,18 @@ import * as React from 'react';
 const HorseCardList =require('./HorseCardList') ;
 const HorseCardListEmpty =require('./HorseCardListEmpty');
 
+import nextPropState from '../../../src/interface';
 interface State {
     nextState: State;
 }
 
 interface Props {
-    horseListEmpty: boolean;
-    nextProps: any;
+    horseListEmpty: any;
+    nextProps?: any;
 }
 
 export class EditableHorseList extends React.Component<Props, State>{
-    shouldComponentUpdate(nextProps, nextState){
+    shouldComponentUpdate(nextProps: nextPropState, nextState: nextPropState){
         if(nextProps.horseListEmpty === this.props.horseListEmpty)
         {
             return false;
