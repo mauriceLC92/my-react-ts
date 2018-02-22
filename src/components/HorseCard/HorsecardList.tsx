@@ -22,7 +22,7 @@ const horseComponents = team.map((horse: horseInfo) => (
     />
 ));
 
-export class HorseCardList extends React.Component<React.Props<{}>, State>{
+export class HorseCardList extends React.Component<Props, State>{
     
     render(){
         //This is where const horseComponents orgially was

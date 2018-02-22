@@ -2,8 +2,8 @@ import * as React from 'react';
 
 
 interface Props {
-    onBegin: boolean;
-    onClearRace: boolean;
+    onBegin: Function;
+    onClearRace: Function;
 
 }
 

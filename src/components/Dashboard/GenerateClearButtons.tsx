@@ -6,14 +6,14 @@ interface State {
 }
 
 interface Props {
-    onGen: boolean;
-    onClear: boolean;
+    onGen: Function;
+    onClear: Function;
 }
 export class GenerateClearButtons extends React.Component <Props, State>{
 
     renderHorseList = () => {
         // this.setState({horseListEmpty: true});
-        this.props.onGen(true)
+        this.props.onGen(true);
       }
     
     clearHorseList = () => {

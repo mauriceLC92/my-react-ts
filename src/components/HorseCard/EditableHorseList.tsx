@@ -3,7 +3,7 @@ const HorseCardList =require('./HorseCardList') ;
 const HorseCardListEmpty =require('./HorseCardListEmpty');
 
 interface State {
-    nextState: any;
+    nextState: State;
 }
 
 interface Props {
