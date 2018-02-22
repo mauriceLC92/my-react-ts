@@ -1,4 +1,4 @@
-export interface horseInfo{
+export default interface horseInfo{
     horse: string;
     id: string;
     avatar_url: string;

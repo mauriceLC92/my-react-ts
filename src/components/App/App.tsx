@@ -24,8 +24,8 @@ interface State {
 	run?: boolean;
 }
 
-export class App extends React.Component<Props, State> {
-	constructor(props: Props) {
+export class App extends React.Component<React.Props<Props>, State> {
+	constructor(props: React.Props<{}>) {
 		super(props);
 		this.state = {horseListEmpty: false, run: false};
 	

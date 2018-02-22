@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { horseInfo } from '../../../interface';
 const HorseCard  =require('./HorseCard');
 const team =require('../App/teamdata');
 
-const horseInfo =require('../../../interface');
+import horseInfo from '../../../src/interface';
 
 interface Props {
     
@@ -23,7 +22,7 @@ const horseComponents = team.map((horse: horseInfo) => (
     />
 ));
 
-export class HorseCardList extends React.Component<Props, State>{
+export class HorseCardList extends React.Component<React.Props<{}>, State>{
     
     render(){
         //This is where const horseComponents orgially was
