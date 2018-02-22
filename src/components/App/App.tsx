@@ -10,21 +10,76 @@ interface State {
 }
 
 export class App extends React.Component<Props, State> {
-	constructor(props: Props) {
+	constructor(props) {
 		super(props);
-	}
-	render() {
+		this.state = {horseListEmpty: false, run: false, beginRace: false};
+	
+	  }
+	
+	  beginRace = () =>{
+		this.setState({beginRace: true})
+	  }
+	
+	  clearRace = () =>{
+		this.setState({beginRace: false})
+	  }
+	  
+	  renderHorseList = () => {
+		this.setState({horseListEmpty: true});
+	
+	  }
+	
+	  clearHorseList = () => {
+		this.setState({horseListEmpty: false});
+	  }
+	
+	  startRace = () =>{
+		this.setState({run: true})
+	  }
+	
+	  resetRace = () =>{
+		this.setState({run: false})
+		
+	  }
+	
+	  render() {
 		return (
-			<div className="App" >
-				<header className="App-header" >
-					<img src={require('../../images/logo.svg')} className="App-logo" alt="logo" />
-					<h1 className="App-title" > Welcome to React with Typescript </h1>
-					<h2 className="App-sub-title" > Kurtosys Grads </h2>
-				</header>
-				<p className="App-intro" >
-					To get started, edit <code> src / components / App / App.tsx </code> and save to reload.
-				</p>
+		  <div className="App">
+			<Header />
+			<div className='ui four column grid'>
+			  <div className='row'>
+				<div className='column'>
+				  <GenerateClearButtons 
+				  onGen = {this.renderHorseList}
+				  onClear = {this.clearHorseList}/>
+				</div>
+				<div className='columnResult'>
+				  <LeaderBoard />
+				</div>
+				<div className='column'>
+				  <h2 className='Heading'>Kurtosys Race Track</h2>
+				</div>
+				<div className='column'>
+				  <StartAndStopButtons 
+				  onStart = {this.startRace}
+				  onStop = {this.resetRace}/>
+				</div>
+			  </div> 
+			  <div className='column'>
+				<EditableHorseList 
+				  horseListEmpty={this.state.horseListEmpty} />
+			  </div>
+			  <div className='column'>
+				<EditableRaceTrack run = {this.state.run}/>
+			  </div>
+			   {/* <div className='column'>...
+			  </div> */}
+			  {/* <div className='column'>
+				...
+			  </div>  */}
 			</div>
+		  </div>
 		);
+	  }
 	}
-}
+	
