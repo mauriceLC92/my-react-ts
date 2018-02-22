@@ -12,8 +12,8 @@ const EditableRaceTrack  = require('../RaceTrack/EditableRaceTrack');
 interface Props {
 	onStart?: boolean;
 	onStop?: boolean;
-	onGen?: boolean;
-	onClear?: boolean;
+	onGen: boolean;
+	onClear: boolean;
 	horseListEmpty?: boolean;
 	run?: boolean;
 
