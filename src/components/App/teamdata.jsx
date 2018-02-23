@@ -3,7 +3,7 @@ function generateTransition(){
     return Math.floor(Math.random() * 4000); 
   }
   
-    const team = [
+    export const team = [
   
       {
           "login": "schalkburger",

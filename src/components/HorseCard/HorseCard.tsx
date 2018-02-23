@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 interface Props {
-    horseAvatar?: string;
-    horseGitUrl?: string;
-    horseLogin?: boolean;
-
+    id: number;
+    horseAvatar: string;
+    horseLogin: string;
+    horseGitUrl: string;
 }
 
 interface State {
