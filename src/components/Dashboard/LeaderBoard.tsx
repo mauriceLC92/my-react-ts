@@ -19,7 +19,6 @@ export class LeaderBoard extends React.Component<Props, State>{
                         <tr>
                             <td>
                                 <h4 className="ui image header"> 
-{/* <img src="https://avatars2.githubusercontent.com/u/1482046?v=4" className="ui mini rounded image" alt="#"/> */}
 <i className="trophy icon">.</i>
                                     <div className="content">
                                         
@@ -29,7 +28,7 @@ export class LeaderBoard extends React.Component<Props, State>{
                                 </h4>
                             </td>
                             <td>
-                                22
+                                ...
                             </td>
                         </tr>
                     </tbody>

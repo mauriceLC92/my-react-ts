@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 interface Props {
     progress: number;
     transitionDuration: number;
@@ -8,6 +9,7 @@ interface State {
 	
 }
 export class ProgressBar extends React.Component<Props, State>{
+    
   render() {
     // console.log(this.props.winRace);   Maybe pass this to the scorebaord to show a winner!!
       return (
