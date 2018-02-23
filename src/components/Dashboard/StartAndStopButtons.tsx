@@ -17,12 +17,12 @@ export class StartAndStopButtons extends React.Component <Props, State>{
 
     startRace = () => {
         // this.setState({run: true})
-        this.props.onStart(true);
+        this.props.onStart();
     }
 
     resetRace = () => {
         // this.setState({run: true})
-        this.props.onStop(false);
+        this.props.onStop();
     }
     
     render(){

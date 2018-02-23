@@ -1,8 +1,8 @@
 import * as React from 'react';
 interface Props {
-    winrace: string;
     progress: number;
     transitionDuration: number;
+    winRace: string;
 }
 interface State {
 	

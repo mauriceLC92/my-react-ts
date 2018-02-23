@@ -1,20 +1,21 @@
 import * as React from 'react';
-const ProgressBar = require('./ProgressBar');
+import { ProgressBar } from './ProgressBar';
 interface Props {
     begin: boolean;
+    win: string;
     transitionDuration: number;
-    win: boolean;
 }
 
 interface State {
-
+    winner: string;
+    
 }
 
 export class Racetrack extends React.Component<Props, State>{
     constructor(props: Props){
         super(props);
 
-        this.state = {winner: 'blank'};
+        this.state = {winner: ''};
     }
 
     render(){
@@ -28,7 +29,7 @@ export class Racetrack extends React.Component<Props, State>{
         }
         else{
             return(
-                <ProgressBar progress={0} />
+                <ProgressBar progress={0} transitionDuration={0} winRace={winRace} />
             );
         }
             

@@ -1,25 +1,25 @@
 import * as React from 'react';
 import './App.css';
+// import '../../../src/index.css';
 
-const Header = require('../Dashboard/Header');
-const EditableHorseList = require('../HorseCard/EditableHorseList');
-const LeaderBoard  = require('../Dashboard/LeaderBoard');
-const StartAndStopButtons = require('../Dashboard/StartAndStopButtons');
-const GenerateClearButtons  = require('../Dashboard/GenerateClearButtons');
-const EditableRaceTrack  = require('../RaceTrack/EditableRaceTrack');
+import { Header } from '../Dashboard/Header';
+import { EditableHorseList } from '../HorseCard/EditableHorseList';
+import { LeaderBoard } from '../Dashboard/LeaderBoard';
+import { StartAndStopButtons } from '../Dashboard/StartAndStopButtons';
+import { GenerateClearButtons } from '../Dashboard/GenerateClearButtons';
+import { EditableRaceTrack } from '../RaceTrack/EditableRaceTrack';
 interface Props {
 	onStart?: boolean;
 	onStop?: boolean;
 	onGen: boolean;
 	onClear: boolean;
-	horseListEmpty?: boolean;
 	run?: boolean;
 
 }
 
 interface State {
-	horseListEmpty?: boolean;
-	run?: boolean;
+	horseListEmpty: boolean;
+	run: boolean;
 }
 
 export class App extends React.Component<React.Props<Props>, State> {
@@ -29,7 +29,7 @@ export class App extends React.Component<React.Props<Props>, State> {
 	
 }
 		
-renderHorseList() {
+renderHorseList = () => {
 		this.setState({horseListEmpty: true});
 	
 }

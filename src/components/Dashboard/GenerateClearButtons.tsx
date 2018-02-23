@@ -12,11 +12,11 @@ export class GenerateClearButtons extends React.Component <Props, State> {
 
 renderHorseList = () => {
 // this.setState({horseListEmpty: true});
-this.props.onGen(true);
+this.props.onGen();
 }
 clearHorseList = () => {
 // this.setState({horseListEmpty: false});
-this.props.onClear(false);
+this.props.onClear();
 }
 
     render(){

@@ -1,6 +1,6 @@
 import * as React from 'react';
-const HorseCardList = require('./HorseCardList') ;
-const HorseCardListEmpty = require('./HorseCardListEmpty');
+import { HorseCardList } from './HorseCardList';
+import  { HorseCardListEmpty } from './HorseCardListEmpty';
 
 import nextPropState from '../../../src/interface';
 interface State {

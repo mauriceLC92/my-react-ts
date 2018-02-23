@@ -1,11 +1,14 @@
 import * as React from 'react';
-const Racetrack = require('./Racetrack');
+import { Racetrack } from './Racetrack';
 
 interface Props {
-
+    
+    // win: string;
+    // transitionDuration: number;
 }
 interface State {
     beginRace: boolean;
+    // begin: boolean;
 }
 export class RaceTrackFull extends React.Component<Props, State>{
     constructor(props: Props){

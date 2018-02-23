@@ -1,9 +1,9 @@
 import * as React from 'react';
-const  RaceTrackFull = require('./RaceTrackFull');
-const  RaceTrackEmpty  = require('./RaceTrackEmpty');
+import { RaceTrackFull } from './RaceTrackFull';
+import  { RaceTrackEmpty }  from './RaceTrackEmpty';
 
 interface Props {
-    run?: boolean;
+    run: boolean;
 }
 
 interface State {
@@ -16,7 +16,7 @@ export class EditableRaceTrack extends React.Component<Props, State>{
         if (this.props.run)
         {
             return(
-                <RaceTrackFull />
+                <RaceTrackFull  />
             );
         }else {
             return(
