@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartAnsStopbuttons component renders the startandstop correctly renders correctly 1`] = `
+<div
+  className="ui medium buttons"
+>
+  <button
+    className="positive ui button"
+    id="startButton"
+    onClick={[Function]}
+  >
+    Render Race Tracks
+  </button>
+  <div
+    className="or"
+  >
+    .
+  </div>
+  <button
+    className="negative ui button"
+    onClick={[Function]}
+  >
+    Clear Race Tracks
+  </button>
+</div>
+`;

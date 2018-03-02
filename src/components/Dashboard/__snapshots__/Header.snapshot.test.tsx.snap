@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders the header correctly renders correctly 1`] = `
+<div
+  className="main-header"
+>
+  <header
+    className="App-header"
+  >
+    <h1
+      className="App-title"
+    >
+      Kurtosys Horse Race Challenge
+    </h1>
+  </header>
+  <div>
+    <i
+      className="wheelchair icon"
+    >
+      .
+    </i>
+    ..,KURTOSYS 1000M Pixel Dash..,
+    <i
+      className="wheelchair icon"
+    >
+      .
+    </i>
+  </div>
+</div>
+`;

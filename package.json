@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "test",
+    "test": "jest",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
@@ -26,8 +26,19 @@
     "ts-jest": "^22.4.0",
     "typescript": "^2.7.2"
   },
-  "jest": {
-    "test": "jest",
-    "verbose": true
+  "jest":{
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
+
 }
