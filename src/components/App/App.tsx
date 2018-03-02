@@ -9,11 +9,11 @@ import { StartAndStopButtons } from '../Dashboard/StartAndStopButtons';
 import { GenerateClearButtons } from '../Dashboard/GenerateClearButtons';
 import { EditableRaceTrack } from '../RaceTrack/EditableRaceTrack';
 interface Props {
-	onStart?: boolean;
-	onStop?: boolean;
+	onStart: boolean;
+	onStop: boolean;
 	onGen: boolean;
 	onClear: boolean;
-	run?: boolean;
+	run: boolean;
 
 }
 
